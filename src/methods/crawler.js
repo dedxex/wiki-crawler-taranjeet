@@ -85,6 +85,10 @@ class Crawler {
             }
         }
     }
+
+    async goTo(url) {
+        await this.page.goto(url);
+    }
 }
 //-------------------------------------------
 module.exports = Crawler;

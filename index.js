@@ -5,6 +5,8 @@ const mongoose = require('mongoose');
 const routes = require('./src/routes');
 const { dbConnectUrl,dbPassword,dbUsername } = require('./config');
 
+const crawler = require('./src/crawler');
+
 try {
     //---------------------------------------------
     let mongoUrl = `mongodb://${dbUsername}:${dbPassword}@${dbConnectUrl}`;
@@ -23,6 +25,8 @@ try {
     server.listen(port);
     console.log("server running at "+port);
     //---------------------------------------------
+
+    //crawler();
 }
 catch (e) {
     console.log("Error:"+e.message);

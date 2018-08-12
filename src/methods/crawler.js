@@ -9,7 +9,7 @@ class Crawler {
         this.error = "";
         this.config = {
             headless : true,
-            args : ['--no-sandbox','--disable-setuid-sandbox']
+            args : ['--no-sandbox', '--disable-setuid-sandbox']
         };
     }
 

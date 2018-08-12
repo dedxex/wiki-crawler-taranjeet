@@ -9,7 +9,7 @@ class Crawler {
         this.error = "";
         this.config = config || {
             headless : true,
-            args : ['--no-sandbox']
+            args : ['--no-sandbox','--disable-setuid-sandbox']
         };
     }
 
@@ -23,7 +23,7 @@ class Crawler {
         await this.page.setViewport({ width: 1366, height: 768});
         await this.page._client.send('Network.clearBrowserCookies');
     }
-    
+
     async checkJQueryLoaded() {
 
         const that = this;
